@@ -14,8 +14,10 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@fontsource/overpass": "^4.5.0",
     "gatsby": "^3.13.1",
     "gatsby-plugin-google-analytics": "^3.14.0",
+    "gatsby-source-filesystem": "^3.14.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   }

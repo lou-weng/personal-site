@@ -1,0 +1,7 @@
+.navButton {
+    color: var(--main);
+    font-size: large;
+    margin: 5%, 5%;
+    padding: 5%, 5%;
+    text-decoration: none;
+}

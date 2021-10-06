@@ -1,0 +1,10 @@
+:root {
+    --main: #0d13a8;
+    --main-dark: #092876;
+    --secondary: #0da89e;
+    --secondary-dark: #09766f;
+}
+
+body {
+    font-family: "Overpass";
+}
