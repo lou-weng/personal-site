@@ -16,6 +16,9 @@ module.exports = {
         name: `markdown-pages`,
         path: `${__dirname}/src/markdown-pages`,
       },
-    }
+    },
+    `gatsby-transformer-remark`, 
+    "gatsby-plugin-catch-links", 
+    "gatsby-plugin-react-helmet"
   ],
 };

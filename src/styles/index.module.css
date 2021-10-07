@@ -2,3 +2,25 @@
     color: var(--main);
     font-weight: 900; 
 }
+
+.titleThick {
+    color: var(--main);
+    font-size: 2.5em;
+}
+
+.coverSection {
+    height: 100%
+}
+
+.vertContainer {
+    display: flex;
+    align-items: center;
+    min-height: 90vh;
+    margin: auto;
+}
+
+.iconButton {
+    color: var(--main);
+    font-size: 1.5rem;
+    padding-right: 1.5%;
+}

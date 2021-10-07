@@ -1,7 +1,19 @@
 .navButton {
     color: var(--main);
     font-size: large;
-    margin: 5%, 5%;
-    padding: 5%, 5%;
+    padding: 2% 2%;
     text-decoration: none;
+}
+
+.navButton:hover {
+    color: var(--secondary)
+}
+
+.navBar {
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    height: 10%;
 }
