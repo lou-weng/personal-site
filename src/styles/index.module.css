@@ -8,6 +8,11 @@
     font-size: 2.5em;
 }
 
+.titleThick > span {
+    color: var(--secondary);
+    font-size: inherit;
+}
+
 .coverSection {
     height: 100%
 }
@@ -23,4 +28,8 @@
     color: var(--main);
     font-size: 1.5rem;
     padding-right: 1.5%;
+}
+
+.iconButton:hover {
+    color: var(--secondary)
 }

@@ -1,9 +1,12 @@
 import * as React from "react"
+import Layout from "../components/Layout"
 
 const BlogPage = () => {
     return (
         <>
-        Hello
+            <Layout>
+                
+            </Layout>
         </>
     )
 }

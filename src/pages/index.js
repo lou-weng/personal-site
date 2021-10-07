@@ -1,24 +1,24 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
-import NavbarComponent from '../components/Navbar'
 import { FaGithub } from '@react-icons/all-files/fa/FaGithub'
 import { FaLinkedin } from '@react-icons/all-files/fa/FaLinkedin'
 import { MdEmail } from '@react-icons/all-files/md/MdEmail'
 import { FaCoffee } from '@react-icons/all-files/fa/FaCoffee'
-import { IconContext } from "@react-icons/all-files/lib"
+
+import Layout from "../components/Layout"
 
 import '../styles/global.module.css'
 import '@fontsource/overpass'
-import { titleThick, headingThick, coverSection, vertContainer, iconButton } from '../styles/index.module.css'
+import { titleThick, headingThick, coverSection, vertContainer, iconButton, titleThickSecondary } from '../styles/index.module.css'
 
 const IndexPage = () => {
 	return (
 		<>
-				<NavbarComponent></NavbarComponent>
+			<Layout>
 				<div className={vertContainer}>
 					<div className={coverSection}>
-						<h1 className={titleThick}>Hello —<br/> Welcome to my website.</h1>
+						<h1 className={titleThick}>Hello —<br/> <span className={titleThickSecondary}>Welcome to my website.</span></h1>
 
 						<span>
 							I am a fourth year business and computer science student currently studying at the University of British Columbia. Technology enthusiast with a particular interest in cloud technologies and software development. Feel free to look through and get a better understanding of who I am. 
@@ -48,6 +48,7 @@ const IndexPage = () => {
 					<h2 className={headingThick}>Experience</h2>
 					Just an overview of everything life has thrown at me. Been quite a ride so far, hoping it gets wilder in the future. 
 				</div>
+			</Layout>
 		</>
 	)
 }

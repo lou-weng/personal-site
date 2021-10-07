@@ -15,5 +15,21 @@
     position: sticky;
     position: -webkit-sticky;
     top: 0;
-    height: 10%;
+}
+
+.logoButton {
+    font-size: large;
+    text-decoration: none;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 2%;
+}
+
+.logoIcon {
+    max-width: 10%;
+}
+
+.logoIcon:hover {
+    opacity: 75%;
 }
