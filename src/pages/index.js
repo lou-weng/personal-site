@@ -10,7 +10,7 @@ import Layout from "../components/Layout"
 
 import '../styles/global.module.css'
 import '@fontsource/overpass'
-import { titleThick, headingThick, coverSection, vertContainer, iconButton, titleThickSecondary } from '../styles/index.module.css'
+import { titleThick, headingThick, coverSection, vertContainer, iconButton, profile, container, titleDesc } from '../styles/index.module.css'
 
 const IndexPage = () => {
 	return (
@@ -18,26 +18,38 @@ const IndexPage = () => {
 			<Layout>
 				<div className={vertContainer}>
 					<div className={coverSection}>
-						<h1 className={titleThick}>Hello —<br/> <span className={titleThickSecondary}>Welcome to my website.</span></h1>
-
-						<span>
-							I am a fourth year business and computer science student currently studying at the University of British Columbia. Technology enthusiast with a particular interest in cloud technologies and software development. Feel free to look through and get a better understanding of who I am. 
-						</span>
-						<br/><br/>
-						<span>
-							<Link to="https://github.com/lou-weng" className={iconButton}>
-								<FaGithub></FaGithub>
-							</Link>
-							<Link to="https://www.linkedin.com/in/louie-weng/" className={iconButton}>
-								<FaLinkedin></FaLinkedin>
-							</Link>
-							<Link to="louieweng@outlook.com" className={iconButton}>
-								<MdEmail></MdEmail>
-							</Link>
-							<Link to="https://calendly.com/louieweng" className={iconButton}>
-								<FaCoffee></FaCoffee>
-							</Link>
-						</span>
+						
+						<div className={container}>
+							<div className={titleDesc}>
+								<h1 className={titleThick}>
+									Hello 
+									<span role="img" aria-label="hand waving">👋</span>
+									<br/> 
+									<span>Welcome to my cozy little nook on the Internet.</span>
+								</h1>
+								<span>
+									I am a fourth year business and computer science student currently studying at the University of British Columbia. Technology enthusiast with a particular interest in cloud technologies and software development. Feel free to look through and get a better understanding of who I am. 
+								</span>
+								<br/><br/>
+								<span>
+									<Link to="https://github.com/lou-weng" className={iconButton}>
+										<FaGithub></FaGithub>
+									</Link>
+									<Link to="https://www.linkedin.com/in/louie-weng/" className={iconButton}>
+										<FaLinkedin></FaLinkedin>
+									</Link>
+									<Link to="louieweng@outlook.com" className={iconButton}>
+										<MdEmail></MdEmail>
+									</Link>
+									<Link to="https://calendly.com/louieweng" className={iconButton}>
+										<FaCoffee></FaCoffee>
+									</Link>
+								</span>
+							</div>
+							<img className={profile} src="profile.png" alt="profile"/>
+						
+						
+						</div>
 					</div>
 				</div>
 				<div>

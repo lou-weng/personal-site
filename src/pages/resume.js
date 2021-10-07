@@ -5,7 +5,7 @@ const ResumePage = () => {
     return (
         <>
             <Layout>
-
+                
             </Layout>
         </>
     )

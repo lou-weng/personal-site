@@ -20,16 +20,31 @@
 .vertContainer {
     display: flex;
     align-items: center;
-    min-height: 90vh;
-    margin: auto;
+    margin: 10% auto 30%;
 }
-
 .iconButton {
     color: var(--main);
-    font-size: 1.5rem;
+    font-size: 2rem;
     padding-right: 1.5%;
 }
 
 .iconButton:hover {
     color: var(--secondary)
+}
+
+.profile {
+    border-radius: 50%;
+    max-height: 20vw;
+    width: auto;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.container {
+    display: flex;
+}
+
+.titleDesc {
+    max-width: 65%;
 }

@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Link } from 'gatsby'
 import logo from "/static/logo.png"
 
-import { navButton, navBar, logoButton, logoIcon, nav2, nav4 } from '../styles/navbar.module.css'
+import { navButton, navBar, logoButton, logoIcon } from '../styles/navbar.module.css'
 
 const NavbarComponent = () => {
     return (
