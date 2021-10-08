@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 import { FaGithub } from '@react-icons/all-files/fa/FaGithub'
 import { FaLinkedin } from '@react-icons/all-files/fa/FaLinkedin'
@@ -12,19 +12,17 @@ import '../styles/global.module.css'
 import '@fontsource/overpass'
 import { titleThick, headingThick, coverSection, vertContainer, iconButton, profile, container, titleDesc } from '../styles/index.module.css'
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
 	return (
 		<>
 			<Layout>
 				<div className={vertContainer}>
 					<div className={coverSection}>
-						
 						<div className={container}>
+							{/* Container to horizontally align picture and cover text */}
 							<div className={titleDesc}>
 								<h1 className={titleThick}>
-									Hello 
-									<span role="img" aria-label="hand waving">👋</span>
-									<br/> 
+									Hello <span role="img" aria-label="hand waving">👋</span><br/> 
 									<span>Welcome to my cozy little nook on the Internet.</span>
 								</h1>
 								<span>
@@ -47,14 +45,19 @@ const IndexPage = () => {
 								</span>
 							</div>
 							<img className={profile} src="profile.png" alt="profile"/>
-						
-						
 						</div>
 					</div>
 				</div>
 				<div>
 					<h2 className={headingThick}>Latest Blog Posts</h2>
 					<p>I like documenting aspects of my life I think are interesting. New tech trends, learnings, and topics to demystify.</p>
+					{ data.allMarkdownRemark.nodes.map(node => {
+						return (
+							<>
+								<Link to={node.frontmatter.slug}>{ node.frontmatter.title }</Link><br/>
+							</>
+						)
+					})}
 				</div>
 				<div>
 					<h2 className={headingThick}>Experience</h2>
@@ -66,3 +69,17 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+export const query = graphql`
+    query BlogPagePreview {
+        allMarkdownRemark {
+            nodes {
+                frontmatter {
+                    slug
+                    title
+                    date
+                }
+            }
+        }
+    }
+`

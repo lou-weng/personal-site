@@ -2,8 +2,8 @@
 slug: "/blog/creating-a-personal-website-1"
 date: "2021-10-06"
 title: "Creating a Personal Website Part 1"
+type: "blog"
 ---
-
 
 # Why is this even a blog post?
 
