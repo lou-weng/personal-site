@@ -1,10 +1,12 @@
 import * as React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/Layout"
+import { Helmet } from "react-helmet"
 
 const BlogPage = ({ data }) => {
     return (
         <>
+            <Helmet title="Blog"></Helmet>
             <Layout>
                 { data.allMarkdownRemark.nodes.map(node => {
                     return (
