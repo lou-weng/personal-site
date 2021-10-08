@@ -1,10 +1,12 @@
 import * as React from 'react'
 import { Helmet } from 'react-helmet'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
-export default function BlogTemplate({ data }) {
+import { blogContainer, featuredImg, content, blogTitle, blogDescription } from "../styles/blogTemplate.module.css"
+
+export default function BlogTemplate({ data, props }) {
     const { markdownRemark } = data
     const { frontmatter, html } = markdownRemark
 
@@ -14,11 +16,15 @@ export default function BlogTemplate({ data }) {
         <>
             <Helmet title={frontmatter.title} />
             <Layout>
-                <div className="blog-post">
-                    <h1>{frontmatter.title}</h1>
-                    <h2>{frontmatter.date}</h2>
-                    <GatsbyImage image={ fluidImageSharp }/>
-                    <div dangerouslySetInnerHTML={{ __html: html }}></div>
+                <div className={blogContainer}>
+                    <Link to="/"><span role="img" aria-label="Backhand Index Pointing Left">👈 Back to Home</span></Link>
+                    <div className="blog-post">
+                        <h2 className={blogTitle}>{frontmatter.title}</h2>
+                        <p className={blogDescription}>{frontmatter.description}</p>
+                        <p>{frontmatter.date}</p>
+                        <GatsbyImage className={featuredImg} image={ fluidImageSharp }/>
+                        <div className={content}dangerouslySetInnerHTML={{ __html: html }}></div>
+                    </div>
                 </div>
             </Layout>
         </>
@@ -33,6 +39,7 @@ export const pageQuery = graphql`
                 date(formatString: "MMMM DD, YYYY")
                 slug
                 title
+                description
                 featuredImage {
                     childImageSharp {
                         gatsbyImageData

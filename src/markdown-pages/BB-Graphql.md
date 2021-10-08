@@ -2,10 +2,11 @@
 slug: "/blog/bootstrap-brain-graphql"
 date: "2021-10-10"
 title: "Bootstrap the Brain: GraphQL"
+description: "A beginner's look into GraphQL and understanding why it's so awesome"
 type: "blog"
-featuredImage: ../images/bb-cloud.jpg
+featuredImage: ../images/bb-graphql.png
+tags: ["learning", "Bootstrap the Brain", "graphql"]
 ---
-# Introduction to GraphQL
 Given that I decided to create my website using Gatsby, learning how to use GraphQL was an absolute must. I have to say, I was honestly suprised at how intuitive the query language was. This write-up covers a bit about the background behind GraphQL and also how to query data from it from a client's perspective. I decided not to include too much detail about servers and implementation since I myself am still in the process of learning. 
 
 # Bringing it back to REST

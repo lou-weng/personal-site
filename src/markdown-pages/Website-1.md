@@ -1,14 +1,12 @@
 ---
 slug: "/blog/creating-a-personal-website-1"
 date: "2021-10-06"
-title: "Creating a Personal Website Part 1"
+title: "Creating a Personal Website - Part 1"
 type: "blog"
-featuredImage: ../images/bb-cloud.jpg
+featuredImage: ../images/personal-site.jpg
+tags: []
 ---
 
-# Why is this even a blog post?
-
-# Starting on Ideation and Wireframing
 I think the reason why my first dozen attempts to launch a functioning and effective personal website failed was due to lack of planning. 
 
 # Takeaways:

@@ -1,0 +1,31 @@
+.blogLink {
+    text-decoration: none;
+    color: var(--secondary);
+
+}
+
+.blogContainer {
+    margin: 2% 0;
+    display: flex;
+    border: 0.5px solid var(--secondary);
+    box-shadow: 5px 5px var(--secondary);
+    overflow: hidden;
+}
+
+.readMore {
+    text-decoration: none;
+    color: var(--main)
+}
+
+.blogImage {
+    max-width: 15vw;
+    min-height: 25vh;
+    max-height: 25vh;
+    margin: auto 2% auto 0;
+    z-index: 10;
+}
+
+.textSection {
+    max-width: 70%;
+    margin: auto 0;
+}

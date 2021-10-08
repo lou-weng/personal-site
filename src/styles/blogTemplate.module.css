@@ -1,0 +1,23 @@
+.blogContainer {
+    margin: 5% 15%;
+
+}
+
+.featuredImg {
+    z-index: 1;
+    margin-bottom: 5%;
+}
+
+.content::first-letter {
+    font-weight: 900;
+    font-size: 4rem;
+    line-height: 0;
+}
+
+.blogTitle {
+    color: var(--main);
+}
+
+.blogDescription {
+    color: var(--secondary-dark)
+}

@@ -14,7 +14,10 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@fontsource/cuprum": "^4.5.0",
+    "@fontsource/fenix": "^4.5.0",
     "@fontsource/overpass": "^4.5.0",
+    "@fontsource/rocknroll-one": "^4.5.0",
     "@react-icons/all-files": "^4.1.0",
     "gatsby": "^3.13.1",
     "gatsby-image": "^3.11.0",
