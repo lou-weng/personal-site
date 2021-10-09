@@ -19,7 +19,7 @@ export default function BlogTemplate({ data, props }) {
                 <div className={blogContainer}>
                     <Link to="/"><span role="img" aria-label="Backhand Index Pointing Left">👈 Back to Home</span></Link>
                     <div className="blog-post">
-                        <h2 className={blogTitle}>{frontmatter.title}</h2>
+                        <h1 className={blogTitle}>{frontmatter.title}</h1>
                         <p className={blogDescription}>{frontmatter.description}</p>
                         <p>{frontmatter.date}</p>
                         <GatsbyImage className={featuredImg} image={ fluidImageSharp }/>

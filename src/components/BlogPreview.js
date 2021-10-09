@@ -12,7 +12,6 @@ const BlogPreviewComponent = (props) => {
                 <Link className={blogLink} to={props.slug}><h3>{props.title}</h3></Link>
                 <p>{props.date}</p>
                 <p>{props.excerpt} <Link className={readMore} to={props.slug}>Read More</Link></p>
-                
             </div>
         </div>
     )
