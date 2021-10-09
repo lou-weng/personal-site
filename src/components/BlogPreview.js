@@ -6,6 +6,7 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 
 const BlogPreviewComponent = (props) => {
     return(
+        <>
         <div className={blogContainer}>
             <GatsbyImage className={blogImage} image={props.image}/>
             <div className={textSection}>
@@ -14,6 +15,7 @@ const BlogPreviewComponent = (props) => {
                 <p>{props.excerpt} <Link className={readMore} to={props.slug}>Read More</Link></p>
             </div>
         </div>
+        </>
     )
 }
 
