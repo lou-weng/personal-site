@@ -16,6 +16,7 @@
 .vertContainer {
     display: flex;
     align-items: center;
+    margin-bottom: auto;
     height: 100vh;
 }
 .iconButton {

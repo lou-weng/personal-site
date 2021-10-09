@@ -1,5 +1,5 @@
 .contentContainer {
-    margin: 0% 20%;
+    margin: 0% 20% 5% 20%;
     height: 100%;
     top: 0;
 }
@@ -7,4 +7,10 @@
 .bodyContainer {
     top: 0;
     position: absolute;
+}
+
+.mainNav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }

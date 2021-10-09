@@ -1,6 +1,5 @@
 .blogContainer {
-    margin: 5% 15%;
-
+    margin: 10% 15% 5% 15%;
 }
 
 .featuredImg {
@@ -15,7 +14,7 @@
 }
 
 .blogTitle {
-    color: var(--main);
+    color: black;
 }
 
 .blogDescription {

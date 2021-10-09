@@ -12,7 +12,7 @@ import BlogPreviewComponent from "../components/BlogPreview"
 import '../styles/global.module.css'
 import "@fontsource/overpass"
 // import '@fontsource/overpass'
-import { titleThick, headingThick, coverSection, vertContainer, iconButton, profile, container, titleDesc } from '../styles/index.module.css'
+import { titleThick, headingThick, vertContainer, iconButton, profile, container, titleDesc } from '../styles/index.module.css'
 import { Helmet } from "react-helmet"
 
 const IndexPage = ({ data }) => {
@@ -21,7 +21,6 @@ const IndexPage = ({ data }) => {
 			<Helmet title="Home"></Helmet>
 			<Layout>
 				<div className={vertContainer}>
-					<div className={coverSection}>
 						<div className={container}>
 							{/* Container to horizontally align picture and cover text */}
 							<div className={titleDesc}>
@@ -50,7 +49,7 @@ const IndexPage = ({ data }) => {
 							</div>
 							<img className={profile} src="profile.png" alt="profile" />
 						</div>
-					</div>
+					
 				</div>
 				<div>
 					<h2 className={headingThick}>Latest Blog Posts</h2>
