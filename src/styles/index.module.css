@@ -13,14 +13,10 @@
     font-size: inherit;
 }
 
-.coverSection {
-    height: 100%
-}
-
 .vertContainer {
     display: flex;
     align-items: center;
-    margin: 10% auto 30%;
+    height: 100vh;
 }
 .iconButton {
     color: var(--main);

@@ -4,7 +4,7 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
-import { blogContainer, featuredImg, content, blogTitle, blogDescription } from "../styles/blogTemplate.module.css"
+import { blogContainer, featuredImg, content, blogTitle, blogDescription, homeButton } from "../styles/blogTemplate.module.css"
 
 export default function BlogTemplate({ data, props }) {
     const { markdownRemark } = data
@@ -17,7 +17,7 @@ export default function BlogTemplate({ data, props }) {
             <Helmet title={frontmatter.title} />
             <Layout>
                 <div className={blogContainer}>
-                    <Link to="/"><span role="img" aria-label="Backhand Index Pointing Left">👈 Back to Home</span></Link>
+                    <Link className={homeButton} to="/"><span role="img" aria-label="Backhand Index Pointing Left">👈 Back to Home</span></Link>
                     <div className="blog-post">
                         <h2 className={blogTitle}>{frontmatter.title}</h2>
                         <p className={blogDescription}>{frontmatter.description}</p>

@@ -21,3 +21,7 @@
 .blogDescription {
     color: var(--secondary-dark)
 }
+
+.homeButton:hover {
+    color: var(--secondary)
+}
