@@ -11,7 +11,6 @@ import BlogPreviewComponent from "../components/BlogPreview"
 
 import '../styles/global.module.css'
 import "@fontsource/overpass"
-// import '@fontsource/overpass'
 import { titleThick, headingThick, vertContainer, iconButton, profile, container, titleDesc } from '../styles/index.module.css'
 import { Helmet } from "react-helmet"
 
@@ -39,9 +38,9 @@ const IndexPage = ({ data }) => {
 									<Link to="https://www.linkedin.com/in/louie-weng/" className={iconButton}>
 										<FaLinkedin></FaLinkedin>
 									</Link>
-									<Link to="louieweng@outlook.com" className={iconButton}>
+									<a href="mailto:louieweng@outlook.com" className={iconButton}>
 										<MdEmail></MdEmail>
-									</Link>
+									</a>
 									<Link to="https://calendly.com/louieweng" className={iconButton}>
 										<FaCoffee></FaCoffee>
 									</Link>

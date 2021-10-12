@@ -4,7 +4,7 @@ date: "2021-10-06"
 title: "Documenting my Personal Website - Part 1"
 description: "After a dozen attempts at creating a personal site, I am finally happy with my current creation. Follow along with my process from ideation, design, to implementation of my website. "
 type: "blog"
-featuredImage: ../images/personal-site.jpg
+featuredImage: ../../images/personal-site.jpg
 tags: []
 ---
 
