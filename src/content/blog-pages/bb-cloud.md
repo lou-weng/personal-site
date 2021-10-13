@@ -7,4 +7,25 @@ featuredImage: ../../images/bb-graphql.png
 tags: ["cloud"]
 ---
 
-Given that I decided to create my website using Gatsby, learning how to use GraphQL was an absolute must. I have to say, I was honestly suprised at how intuitive the query language was. This write-up covers a bit about the background behind GraphQL and also how to query data from it from a client's perspective. I decided not to include too much detail about servers and implementation since I myself am still in the process of learning. 
+I remember by first exposure to cloud computing very vividly. I was thrust into the world of AWS in my second year of university when my mentor asked me to go with him to Amazon's annual Re:Invent Conference. 
+
+I figure that a cool challenge for my blog is to see if I can try to simplify an introduction to cloud for someone who has no idea what it is. 
+
+# Cloud in your everyday
+
+Before I go into technical stuff, I want to highlight areas in which you may already have been exposed to cloud. It's not this super technical or abstract concept only used by technology firms, but rather its a component of everyday life for most of us. 
+
+* Google Drive. As students, we use this online service to save documents, powerpoints, spreadsheets, and media. Once you save something on it, you can access that resource from any device using the internet. If you have a project you need to collaborate with multiple teammates on, Google Drive enables everyone to concurrently modify a single document. 
+* Zoom. Record a meeting one, but retrieve your recording from anywhere. 
+
+# What is cloud?
+
+Start with this statement:
+
+> Cloud is the idea that you access and use computing resources over the Internet
+
+I want to tackle two parts of this statement and see if I can help you, the read, understand exactly what it means.
+
+# 1. Computing Resources
+
+ 
