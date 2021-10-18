@@ -4,11 +4,6 @@
     top: 0;
 }
 
-.bodyContainer {
-    top: 0;
-    position: absolute;
-}
-
 .mainNav {
     position: sticky;
     top: 0;
