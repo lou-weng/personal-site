@@ -6,9 +6,7 @@ const ProjectsPage = () => {
     return (
         <>
             <Helmet title="Projects"></Helmet>
-            <Layout>
-                
-            </Layout>
+            <Layout />
         </>
     )
 }

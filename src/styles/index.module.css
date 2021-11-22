@@ -6,6 +6,7 @@
 .titleThick {
     color: var(--main);
     font-size: 2.5em;
+    max-width: 45%;
 }
 
 .titleThick > span {
@@ -43,5 +44,5 @@
 }
 
 .titleDesc {
-    max-width: 65%;
+    max-width: 90%;
 }

@@ -4,7 +4,7 @@ import Layout from "../components/Layout"
 import { Helmet } from "react-helmet"
 
 import BlogPreviewComponent from "../components/BlogPreview"
-import { blogContainer } from '../styles/blog.module.css'
+import { blogContainer, blogHeader } from '../styles/blog.module.css'
 
 const BlogPage = ({ data }) => {
     return (
@@ -12,7 +12,8 @@ const BlogPage = ({ data }) => {
             <Helmet title="Blog"></Helmet>
             <Layout>
                 <div className={blogContainer}>
-                <h1>Blog</h1>
+                <h1 className={blogHeader}>Blog</h1>
+                <p>A collection of interesting technologies and topics that I have crossed paths with.</p>
                 { data.allMarkdownRemark.nodes.map(node => {
                     return (
                         <BlogPreviewComponent 

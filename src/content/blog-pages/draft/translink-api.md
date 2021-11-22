@@ -1,21 +1,44 @@
 ---
 slug: "/blog/translink-api"
-date: "2021-10-14"
-title: "Using the Translink API for a personal project"
-type: "blog"
-featuredImage: ../../images/bb-cloud.jpg
+date: "2021-11-01"
+title: "Translink Bus Schedule Mobile App"
+type: "project"
+featuredImage: ../../../images/translink.jpg
 tags: ["project", "microservice", "java", "api"]
+description: "I use the bus system here in Vancouver...a lot. I never really liked the options available to me when getting the arrival times of public transit, so I decided to do something about it."
 ---
 
-Ever wondered how transit apps are able to get information about bus routes and service schedules? How is it that when I'm waiting for a bus at school, multiple different apps can all estimate the next bus. Not all of them have access to direct connections to Translink buses right?[^fn1] 
+Ever wondered how transit apps are able to get information about bus routes and service schedules? How is it that when I'm waiting for a bus at school, multiple different apps can all estimate the next bus. Not all of them have access to direct connections to Translink buses right?
 
 Whenever I want to check for the next bus near me, there are three main options:
 
-| Method                               | Advantages                                                   | Disadvantages                                                |
-| ------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Google Maps                          | - provides detailed information about the next bus           | - not always the most accurate in my experience<br />- for a student on a student phone plan, I don't want to consume a lot of data with every search<br />- I have to open the app, type in my destination, then search for the stop that is relevant to me |
-| Text Bus Stop # to Translink (33333) | - detailed information straight from Translink<br />         | - I need to remember the bus stop numbers of all my frequented bus stops<br />- I need to text, which from my android phone isn't always the best user experience <br />- If I can take two possible buses, I need to text twice to get the next times of the two buses |
-| Bus Schedule Mobile App              | - nice interface<br />- can save the routes I use for subsequent uses without me needing to search each time | - if I am at a friend's house, I need to search for specific stops to get the nearest bus<br />- ever had to deal with a mobile app you use for 5 seconds, but it makes 10 for the damn thing to load? |
+### Method #1: Google Maps  
+Advantages: 
+* provides detailed information and estimates about the next bus based on street conditions
+* not always the most accurate in my experience
+Disadvantages
+* I have to open the app, type in my destination, then search for the stop that is relevant to me (unnecessary steps)
+* for a student on a basic phone plan, I don't want to consume a lot of data with every search
+* all the fancy UI loading takes time
+
+### Method #2: Translink Text Service to 33333  
+Advantages: 
+* no data consumption since I'm texting a number
+* short and sweet information. I get the next three buses arrival times, no extraneous information
+Disadvantages
+* if I can take two possible bus routes, I need to text twice to get the next arrival times of the two options
+* I need to remember the bus stop numbers of all my frequented bus stops
+* if I am searching for buses before I go outside, can't get the bus stop information without searching it up online
+
+### Method #3: Transit Mobile App  
+Advantages: 
+* can save the routes I use for subsequent uses without me needing to search each time
+* often a better user experience than #2 and not as load-heavy as #1
+Disadvantages
+* depending on the app, unnecessary information gets loaded
+* also depending on the app, load time to start up can take a while
+
+### Conclusion
 
 Doing a little digging, I realized that Translink actually provides a public API to their bus service. By making a REST call to their API endpoint, you can get data about stops, routes, buses, and more. 
 
@@ -26,46 +49,8 @@ So assuming this hypothesis is true, it got me thinking...if I dislike using the
 I want something that can do the following:
 
 * given by current location, I want to see the bus stops that are within X distance of me
-* given the bus stops closest to me, I want to the next 6 scheduled buses for each stop
+* given the bus stops closest to me, I want to see information about all bus routes that serve that stop
+* for each bus route at a given stop, show the next incoming 3 buses
+* an application that I can access quickly, with minimal load time, preferably on my phone
 
-### API Reference
-
-To access the Translink API, visit their site and create an account. This will allow you access to create your own API key. 
-
-The URL for querying is based off of the follow:
-
-```
-https://api.translink.ca/rttiapi/v1/
-```
-
-#### Stops
-
-I used the stops API to return the stops closest to my current location. You just need to append the following to the URL:
-
-```
-stops?apikey=<INSERT_API_KEY>&lat=<INSERT_LATITUDE>&long=<INSERT_LONGITUDE>&radius=<SEARCH_RADIUS>
-```
-
-**Example**: 
-
-```
-// querying for the closest stops from UBC
-https://api.translink.ca/rttiapi/v1/stops?apikey=31Z2KlibdtLWpif0eIHL&lat=49.265&long=-123.2544&radius=500
-```
-
-Result:
-
-```
-// only showing an extract of results because actual results are too long
-
-```
-
-### Useful Tools
-
-While I was developing this simple app, I did use a few tools that I want to give honourable mentions to. 
-
-#### Insomnia 
-
-This was an awesome tool to easily work with REST APIs. I was able to send different types of requests and explore the resultant data without having to worry about constantly changing code or creating test files. 
-
-I actually made sure that I knew the format and composition of my data before I started even writing any code to start with. 
+I wrote this article to document my current situation and requirements. Stay tuned to my next article revolving around this topic where I go into detail about my project implementation. 

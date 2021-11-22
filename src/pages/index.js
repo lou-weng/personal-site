@@ -21,7 +21,7 @@ const IndexPage = ({ data }) => {
 			<Layout>
 				<div className={vertContainer}>
 						<div className={container}>
-							{/* Container to horizontally align picture and cover text */}
+							{/* Container to horizontally align cover text */}
 							<div className={titleDesc}>
 								<h1 className={titleThick}>
 									Hello <span role="img" aria-label="hand waving">👋</span><br />
@@ -30,7 +30,10 @@ const IndexPage = ({ data }) => {
 								<span>
 									I am a fourth year business and computer science student currently studying at the University of British Columbia. Technology enthusiast with an interest in cloud technologies and software development. Feel free to look around and get a better understanding of who I am. The website is currently undergoing iterative upgrades.
 								</span>
-								<br /><br />
+								<div>
+									<p>Next planned update as of November 21, 2021: <br/><b>Set up a headless-CMS using Strapi and Oracle Cloud</b></p>
+								</div>
+								<br/>
 								<span>
 									<Link to="https://github.com/lou-weng" className={iconButton}>
 										<FaGithub></FaGithub>
@@ -46,7 +49,7 @@ const IndexPage = ({ data }) => {
 									</Link>
 								</span>
 							</div>
-							<img className={profile} src="profile.png" alt="profile" />
+							{/* <img className={profile} src="profile.png" alt="profile" /> */}
 						</div>
 					
 				</div>
@@ -66,10 +69,6 @@ const IndexPage = ({ data }) => {
 						)
 					})}
 				</div>
-				{/* <div>
-					<h2 className={headingThick}>Experience</h2>
-					Just an overview of everything life has thrown at me. Been quite a ride so far, hoping it gets wilder in the future.
-				</div> */}
 			</Layout>
 		</>
 	)

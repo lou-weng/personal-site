@@ -1,6 +1,6 @@
 ---
 slug: "/blog/bootstrap-brain-graphql"
-date: "2021-10-10"
+date: "2021-11-21"
 title: "Bootstrap the Brain: GraphQL"
 description: "A beginner's look into GraphQL and understanding why it's so awesome"
 type: "blog"
